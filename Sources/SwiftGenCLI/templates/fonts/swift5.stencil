@@ -29,7 +29,7 @@
     {{path|basename}}
   {%- endif -%}
 {% endmacro %}
-{{accessModifier}} enum {{param.enumName|default:"FontFamily"}} {
+{{accessModifier}} enum {{param.enumName|default:"FontFamily"}}: Sendable {
   {% for family in families %}
   {{accessModifier}} enum {{family.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
     {% for font in family.fonts %}
